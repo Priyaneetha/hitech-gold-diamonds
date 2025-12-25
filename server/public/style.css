@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #4b2c3d;
+  border-bottom: none;
+}
+
+.brand-name {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f1e6ec;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ebc445;
+}
+.logo { height: 42px; }
+.brand-name {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #d4af37;
+}
+.nav-links a.active {
+  color: #b68d40;
+}
+
+/* HERO */
+.hero-static {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg,#f7f6fb,#ece9f5);
+}
+.hero-content {
+  padding-left: 80px;
+}
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 56px;
+}
+.gold-line {
+  width: 60px;
+  height: 3px;
+  background: #d4af37;
+  margin-bottom: 16px;
+}
+
+/* GOLD RATE */
+.gold-rate-section {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+.gold-rate-box {
+  border: none;
+  padding: 36px 70px;
+  text-align: center;
+  background: #faf7f9;
+  box-shadow: 0 10px 30px rgba(75,44,61,0.15);
+  border-radius: 6px;
+}
+
+.gold-rate-box h2 {
+  color: #4b2c3d;
+}
+
+
+/* COLLECTIONS */
+.page-header {
+  text-align: center;
+  padding: 60px 20px;
+}
+.collections-page {
+  padding: 40px 80px 80px;
+}
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.collection-card {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #eee;
+  padding: 20px;
+  transition: all .3s;
+}
+.collection-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+.collection-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* PRODUCT */
+.product-detail {
+  padding: 80px;
+}
+.product-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+.product-info h1 {
+  color: #4b2c3d;
+}
+
+
+/* FOOTER */
+.footer {
+  background: #4b2c3d;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.footer p {
+  opacity: 0.9;
+}
+
+.malayalam {
+  opacity: .9;
+}
+/* =========================
+   MOBILE RESPONSIVENESS
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .nav-left {
+    justify-content: center;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  /* HERO */
+  .hero-static {
+    height: auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-left: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  /* GOLD RATE */
+  .gold-rate-box {
+    padding: 28px 30px;
+    width: 90%;
+  }
+
+  /* COLLECTIONS GRID */
+  .collections-page {
+    padding: 40px 20px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* PRODUCT DETAIL */
+  .product-detail {
+    padding: 40px 20px;
+  }
+
+  .product-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .product-info h1 {
+    font-size: 32px;
+  }
+
+  /* ADMIN */
+  .admin-container {
+    padding: 20px;
+  }
+
+  .admin-section {
+    padding: 24px;
+  }
+
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hi-Tech Gold & Diamonds</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="logo.png" class="logo" alt="Hi-Tech Gold & Diamonds">
+    <span class="brand-name">Hi-Tech Gold & Diamonds</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="#footer">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO (STATIC, SLIDER LOGIC KEPT SEPARATE) -->
+<section class="hero-static">
+  <div class="hero-content">
+    <span class="gold-line"></span>
+    <h1>Hi-Tech Gold & Diamonds</h1>
+    <p>Tradition Crafted in Gold</p>
+    <p class="malayalam">ഓരോ തരി പൊന്നിലും ഒരു കോടി വിശ്വാസം </p>
+  </div>
+</section>
+
+<!-- GOLD RATE -->
+<section class="gold-rate-section">
+  <div class="gold-rate-box">
+    <span class="label">Today’s Gold Rate</span>
+    <h2 id="goldRate">₹ —</h2>
+    <p class="sub">Per gram · 8 grams</p>
+  </div>
+</section>
+
+<!-- VIEW COLLECTIONS -->
+<section class="home-cta">
+  <a href="collections.html" class="view-all">View Our Collections →</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <p class="malayalam">ഓരോ തരി പൊന്നിലും ഒരു കോടി വിശ്വാസം </p>
+  <p>Hi-Tech Gold & Diamonds</p>
+  <p>Kuttiadi, Kerala, India</p>
+  <p>📞 +91 94473 84746</p>
+</footer>
+
+<script>
+const BASE_URL = "https://hitech-gold-diamonds.onrender.com";
+
+fetch(`${BASE_URL}/api/goldrate`)
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("goldRate").innerText = `₹ ${data.rate}`;
+  });
+</script>
+
+</body>
+</html>
